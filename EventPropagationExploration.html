@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 500px;
+            height: 500px;
+            background-color: rgb(27, 188, 180);
+            align-content: center;
+            text-align: center;
+            margin: auto;
+        }
+        #child{
+            margin: auto;
+            width: 400px;
+            height: 400px;
+            background-color: rgb(169, 92, 92);
+            align-content: center;
+            text-align: center;
+        }
+        #gchild{
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(184, 184, 92);
+            align-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" >
+        <button>Click Me!</button>
+        <div id="child">
+            <button>Click Me!</button>
+            <div id="gchild">
+                <button>Click Me!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="EventPropagationExploration.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="type" type="text" placeholder="Enter Notes">
+    <button onclick="add()" id="add">add</button>
+    <button onclick="remove()" id="remove">remove</button>
+    <ul id="notes"></ul>
+    <script>
+        function displayData(){
+            let notes=JSON.parse(localStorage.getItem("tasks"))
+            let list=document.getElementById("notes")
+            list.innerHTML=''
+            notes.forEach((ele)=>{
+                let li=document.createElement("li")
+                li.innerText=ele
+                console.log(ele)
+                list.appendChild(li)
+            })
+        }
+
+        function add(){
+            let input=document.getElementById("type").value
+            let notes=JSON.parse(localStorage.getItem("notes")) || []
+            notes.push(notes)
+            localStorage.setItem("notes",JSON.stringify(notes))
+            displayData()
+        }
+    </script>
+</body>
+</html>
